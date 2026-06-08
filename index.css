@@ -1,0 +1,136 @@
+
+      @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+    color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+.links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.links a:hover {
+    color: aqua;
+}
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    gap: 40px;
+}
+.hero-text h1 {
+    font-size: 3rem;
+}
+.hero-text p {
+    margin: 20px 0;
+}
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    background: #38bdf8;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+button:hover {
+    transform: translate(-5px);
+}
+
+.button:active,
+.active {
+  top: 2px;
+  left: 1px;
+	box-shadow: none;
+}
+
+.hero-img img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.skills,
+.projects,
+.contact {
+    padding: 70px 10%;
+}
+
+.skills h2,
+.projects h2,
+.contact h2 {
+    margin-bottom: 30px;
+}
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns:
+    repeat(auto-fit,
+    minmax(200px, 1fr)
+    );
+    gap: 20px;
+}
+
+.card, 
+.project {
+    background: rgba(225, 225, 225, 0.08);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: .3s;
+}
+.card:hover,
+.project:hover {
+    transform:
+    translateY(-10px);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+input,
+textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+}
+textarea {
+    height: 120px;
+}
+footer {
+    text-align: center;
+    padding: 30px;
+}
+
+@media(max-width:768px){
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text h1 {
+    font-size: 2rem;
+}
+}
